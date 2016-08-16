@@ -9,7 +9,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Note {
 
     @JsonProperty
-    private Integer id;
+    private Long id;
 
     @JsonProperty
     private String title;
@@ -17,7 +17,7 @@ public class Note {
     @JsonProperty
     private String text;
 
-    public Note(Integer id, String title, String text) {
+    public Note(Long id, String title, String text) {
         this.id = id;
         this.title = title;
         this.text = text;
@@ -25,11 +25,11 @@ public class Note {
        
     public Note() {}
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
