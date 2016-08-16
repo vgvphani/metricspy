@@ -1,14 +1,35 @@
-'use strict';
+angular.module('app', [])
+    .factory('noteService', noteService)
+    .component('noteForm', {
+        templateUrl: 'note-form/note-form.tpl',
+        controller: NoteFormController,
+        controllerAs: 'vm',
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+        require: {
+            notesController: '^notes'
+        },
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+        bindings: {
+          data: '<',
+          onSubmit: '<',
+          onReset: '<'
+        }
+    })
+    .component('notes', {
+        templateUrl: 'notes/notes.tpl',
+        controller: NotesController,
+        controllerAs: 'vm'
+    })
+    .component('note', {
+        templateUrl: 'note/note.tpl',
+        controller: NoteController,
+        controllerAs: 'vm',
+
+        require: {
+          notesController: '^notes'
+        },
+
+        bindings: {
+            data: '<'
+        }
+    });
