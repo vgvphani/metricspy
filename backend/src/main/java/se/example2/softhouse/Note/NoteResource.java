@@ -8,9 +8,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-/**
- * Created by hxs on 2016-08-16.
- */
 
 @Path("/note")
 public class NoteResource {
@@ -64,6 +61,18 @@ public class NoteResource {
                 note.setId(updatedNote.getId());
                 note.setText(updatedNote.getText());
                 note.setTitle(updatedNote.getTitle());
+            }
+        }
+    }
+    
+    @DELETE
+    @Path("/{id}")
+    public void deleteNote(@PathParam("id") Integer id) {
+    	
+    	for(Integer i = 0; i < notes.size(); i++) {
+            if(notes.get(i).getId().equals(id)) {
+                notes.remove(notes.get(i));
+                break;
             }
         }
     }

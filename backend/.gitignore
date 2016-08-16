@@ -8,3 +8,9 @@ tmp
 build/
 .idea/
 .gradle
+/bin/
+./classpath
+./project
+.project
+.classpath
+.settings/

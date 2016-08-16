@@ -22,7 +22,7 @@ public class Note {
         this.title = title;
         this.text = text;
     }
-
+       
     public Note() {}
 
     public Integer getId() {
