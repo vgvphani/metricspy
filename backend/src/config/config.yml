@@ -6,7 +6,7 @@ defaultNote:
 
 assets:
   overrides:
-    /: ../frontend/app/
+    /: ../frontend/
 
 server:
   rootPath: '/api/*'

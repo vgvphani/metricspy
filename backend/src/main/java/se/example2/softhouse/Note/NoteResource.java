@@ -57,6 +57,7 @@ public class NoteResource {
     }
 
     @PUT
+    @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     public void updateNote(Note updatedNote) {
 
