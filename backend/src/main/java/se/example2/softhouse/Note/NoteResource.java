@@ -24,7 +24,7 @@ public class NoteResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Note> getNotes(@QueryParam("id")Optional<Integer> id) {
+    public List<Note> getNotes(@QueryParam("id")Optional<Long> id) {
 
         if(id.isPresent()) {
             return notes
@@ -45,7 +45,7 @@ public class NoteResource {
     @GET
     @Path("/{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Note getSpecificNote(@PathParam("id") Integer id) {
+    public Note getSpecificNote(@PathParam("id") Long id) {
 
         for(Integer i = 0; i < notes.size(); i++) {
             if(notes.get(i).getId().equals(id)) {
@@ -71,7 +71,7 @@ public class NoteResource {
     
     @DELETE
     @Path("/{id}")
-    public void deleteNote(@PathParam("id") Integer id) {
+    public void deleteNote(@PathParam("id") Long id) {
     	
     	for(Integer i = 0; i < notes.size(); i++) {
             if(notes.get(i).getId().equals(id)) {
