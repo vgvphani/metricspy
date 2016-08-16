@@ -3,8 +3,8 @@
         <div class="panel-heading">
             <h3 class="panel-title pull-left">{{vm.data.title}}</h3>
             <div class="pull-right">
-                <a ng-click="vm.editNote()" class="btn btn-xs btn-info"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a>
-                <a ng-click="vm.removeNote()" class="btn btn-xs btn-danger"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></a>
+                <a ng-click="vm.editNote()" class="btn btn-xs btn-info">Edit</a>
+                <a ng-click="vm.removeNote()" class="btn btn-xs btn-danger">Remove</a>
             </div>
 
             <div class="clearfix"></div>

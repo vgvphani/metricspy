@@ -12,7 +12,7 @@
     </div>
 
     <div class="panel-footer text-right">
-        <button type="submit" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></button>
-        <button type="reset" class="btn btn-xs btn-default" ng-click="vm.onReset()"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></button>
+        <button type="submit" class="btn btn-xs btn-success">Submit</button>
+        <button type="reset" class="btn btn-xs btn-default" ng-click="vm.onReset()">Reset</button>
     </div>
 </form>

@@ -1,7 +1,7 @@
 angular.module('app', [])
     .factory('noteService', noteService)
     .component('noteForm', {
-        templateUrl: 'note-form/note-form.tpl',
+        templateUrl: 'app/note-form/note-form.tpl',
         controller: NoteFormController,
         controllerAs: 'vm',
 
@@ -16,12 +16,12 @@ angular.module('app', [])
         }
     })
     .component('notes', {
-        templateUrl: 'notes/notes.tpl',
+        templateUrl: 'app/notes/notes.tpl',
         controller: NotesController,
         controllerAs: 'vm'
     })
     .component('note', {
-        templateUrl: 'note/note.tpl',
+        templateUrl: 'app/note/note.tpl',
         controller: NoteController,
         controllerAs: 'vm',
 

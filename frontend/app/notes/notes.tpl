@@ -8,7 +8,7 @@
 
         <div class="col-xs-12 text-center" ng-if="!vm.hasNotes()">
             <div class="alert alert-info" role="alert">
-                <h4><span class="glyphicon glyphicon-exclamation-sign"></span> Oh no!</h4>
+                <h4>Oh no!</h4>
                 <p>There are no notes yet.</p>
             </div>
         </div>
