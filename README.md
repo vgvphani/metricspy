@@ -13,7 +13,7 @@ We will begin by downloading the git repository. For this, we will use WebStorm.
 1. Open WebStorm
 2. (Optional) If you already have a open project, go to **File** > **Close Project**
 3. You should see the prompt (as shown in image). Click on **Check out from Version Control** > **Git**
-!()[instructions/ws1.png] 
+![](https://bytebucket.org/dinoopijac/bthwebintro/raw/02a92b1839d510e8753415b194966052bcac4100/instructions/idea1.png?token=9cdb1faf32bda3f7bf1a83baee0e930e73ea4e84) 
 4. In **Git Repository URL** type 'https://dinoopijac@bitbucket.org/dinoopijac/bthwebintro.git'
 5. In **Parent Directory** type in the directory you wish to save your project in.
 **E.g. Windows:** C:\Users\<username>\
