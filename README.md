@@ -15,12 +15,7 @@ We will begin by downloading the git repository. For this, we will use WebStorm.
 2. (Optional) If you already have a open project, go to **File** > **Close Project**
 3. You should see the prompt (as shown in image). Click on **Check out from Version Control** > **Git** ![](https://googledrive.com/host/0B2H7nU2mgobdeGc0ckZwYmZVeHM/ws1.png) 
 4. In **Git Repository URL** type ``https://dinoopijac@bitbucket.org/dinoopijac/bthwebintro.git``
-5. In **Parent Directory** type in the directory you wish to save your project in.
-````
-E.g. Windows: C:\Users\<username>\
-E.g. macOS: /Users/<username>/
-E.g. Unix: /home/<username>/
-````
+5. In **Parent Directory** type in the directory you wish to save your project in. For example: Windows: ``C:\Users\<username>\``, macOS: ``/Users/<username>/``, Other UNIX OS: ``/home/<username>/``
 6. Leave **Directory Name** as is and press the **Clone** button ![](https://googledrive.com/host/0B2H7nU2mgobdeGc0ckZwYmZVeHM/ws2.png)
 7. If a message appears on the screen about 'Checkout From Version Control', just press **Yes**
 8. A new project window will appear. Press on the 'clip' icon in the lower left corner. A pane will appear to the right. Click on **1: Project** to view all the files that have been cloned. ![](https://googledrive.com/host/0B2H7nU2mgobdeGc0ckZwYmZVeHM/ws3.png)
