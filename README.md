@@ -56,21 +56,21 @@ You have now successfully downloaded the git repository. You are now ready to de
 6. A pop-up will be shown in the top right corner (Unregistered VCS root detected). In this case, press **Ignore**, but in the future, when you work on your own 
 projects, press **Add root**.
 
-!()[https://googledrive.com/host/0B2H7nU2mgobdeGc0ckZwYmZVeHM/idea4.png]
+![](https://googledrive.com/host/0B2H7nU2mgobdeGc0ckZwYmZVeHM/idea4.png)
 
 7. In the left panel (the file browser), open **backend** > **src** > **main** > **java** > **se.example2.softhouse**. Right click on **DemoApplication** and 
 select Run 'DemoApplicatio...main()'.
 
-!()[https://googledrive.com/host/0B2H7nU2mgobdeGc0ckZwYmZVeHM/idea5.png]
+![](https://googledrive.com/host/0B2H7nU2mgobdeGc0ckZwYmZVeHM/idea5.png)
 
 8. A message will be shown in the console. Go to the file selection in the top right corner (where it says 'DemoApplication') and select **Edit 
 Configurations ...**
 
-!()[https://googledrive.com/host/0B2H7nU2mgobdeGc0ckZwYmZVeHM/idea6.png]
+![](https://googledrive.com/host/0B2H7nU2mgobdeGc0ckZwYmZVeHM/idea6.png)
 
 9. In the **Program Arguments** field, type **server src/config/config.yml**, press **Apply**.
 
-!()[https://googledrive.com/host/0B2H7nU2mgobdeGc0ckZwYmZVeHM/idea7.png]
+![](https://googledrive.com/host/0B2H7nU2mgobdeGc0ckZwYmZVeHM/idea7.png)
 
 10. Finally, in the top right corner, press the green play button and point your browser to [http://localhost:8080/](http://localhost:8080)
 
