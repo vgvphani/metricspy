@@ -7,9 +7,6 @@
  * @returns {Object}
  */
 function noteService($http, $interpolate) {
-    // TODO: remove me
-    var id = 0;
-
     /**
      * This is the base URL to our API in the backend.
      * @type {String}
@@ -48,7 +45,7 @@ function noteService($http, $interpolate) {
      * @returns {Object}
      */
     function create(title, text) {
-        return $http.post(toListURL, { id: id++, title: title, text: text });
+        return $http.post(toListURL, { title: title, text: text });
     }
 
 
