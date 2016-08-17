@@ -1,6 +1,5 @@
 
 defaultNote:
-  id: 1
   title: 'The default note'
   text: 'This is the default note for the demo application'
 

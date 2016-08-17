@@ -18,8 +18,10 @@ public class NoteResource {
 
     public NoteResource(Note defaultNote) {
         notes = new ArrayList<>();
-        notes.add(defaultNote);
         id = new AtomicLong();
+
+        defaultNote.setId(id.incrementAndGet());
+        notes.add(defaultNote);
     }
 
     @GET
@@ -59,11 +61,10 @@ public class NoteResource {
     @PUT
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    public void updateNote(Note updatedNote) {
+    public void updateNote(Note updatedNote, @PathParam("id") Long id) {
 
         for(Note note:notes) {
-            if(note.getId().equals(updatedNote.getId())) {
-                note.setId(updatedNote.getId());
+            if(note.getId().equals(id)) {
                 note.setText(updatedNote.getText());
                 note.setTitle(updatedNote.getTitle());
             }
@@ -73,7 +74,7 @@ public class NoteResource {
     @DELETE
     @Path("/{id}")
     public void deleteNote(@PathParam("id") Long id) {
-    	
+
     	for(Integer i = 0; i < notes.size(); i++) {
             if(notes.get(i).getId().equals(id)) {
                 notes.remove(notes.get(i));
