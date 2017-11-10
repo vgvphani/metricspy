@@ -25,7 +25,7 @@ public class MetricResource {
         newMetric.setId(id.incrementAndGet());
         metricList.add(newMetric);
     }
-
+// Get method to return the collected metrics
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Metric> getMetricList(){
