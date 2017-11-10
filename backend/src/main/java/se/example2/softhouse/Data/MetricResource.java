@@ -18,7 +18,7 @@ public class MetricResource {
         metricList = new ArrayList<>();
         id = new AtomicLong();
     }
-
+// post method is to accept the metrics from python script in JSON
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public void addMetric(Metric newMetric){
