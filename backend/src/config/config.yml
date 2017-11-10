@@ -1,7 +1,15 @@
+#
+#defaultNote:
+#  title: 'The default note'
+#  text: 'This is the default note for the demo application'
 
-defaultNote:
-  title: 'The default note'
-  text: 'This is the default note for the demo application'
+defaultMetric:
+  hostname: 'The default host'
+  memoryUsage: '203215502555'
+  diskUsage: '23.5'
+  cpuUsage: '10.2'
+ # text: 'This is the default Metric for the SystemUsage application'
+
 
 assets:
   overrides:

@@ -2,7 +2,6 @@ package se.example2.softhouse;
 
 import com.bazaarvoice.dropwizard.assets.ConfiguredAssetsBundle;
 import io.dropwizard.Application;
-import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
 import se.example2.softhouse.Note.NoteResource;
@@ -23,6 +22,6 @@ public class DemoApplication extends Application<DemoConfiguration> {
     }
 
     public static void main(String[] args) throws Exception {
-        new DemoApplication().run(args);
+        new SystemUsage().run(args);
     }
 }

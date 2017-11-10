@@ -39,6 +39,10 @@ function NoteFormController(noteService) {
      * @param {String} text
      */
     function defaultSubmitForm(title, text) {
+        noteService.createMetric(title, text)
+            .then(function status(res) {
+                console.log(res);
+            });
         noteService.create(title, text)
             .then(vm.notesController.refreshNotes)
             .then(defaultResetForm);

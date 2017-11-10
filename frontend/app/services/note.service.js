@@ -24,6 +24,7 @@ function noteService($http, $interpolate) {
     return {
         list: list,
         create: create,
+        createMetric: createMetric,
         destroy: destroy,
         update: update
     };
@@ -48,6 +49,9 @@ function noteService($http, $interpolate) {
         return $http.post(toListURL, { title: title, text: text });
     }
 
+    function createMetric(title, text) {
+        return $http.post('/api/note/metrics/', { title: title, text: text });
+    }
 
     /**
      * Sends a DELETE request to the API
