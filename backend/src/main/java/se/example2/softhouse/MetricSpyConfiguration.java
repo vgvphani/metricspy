@@ -13,14 +13,7 @@ import javax.validation.constraints.NotNull;
 /**
  * Created by hxs on 2016-08-16.
  */
-public class SystemUsageConfiguration extends Configuration implements AssetsBundleConfiguration{
-
-    private Metric defaultMetric;
-
-    public Metric getDefaultMetric() {
-        return defaultMetric;
-    }
-
+public class MetricSpyConfiguration extends Configuration implements AssetsBundleConfiguration{
     @Valid
     @NotNull
     @JsonProperty

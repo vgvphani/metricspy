@@ -18,13 +18,10 @@ public class NoteResource {
     private List<Metric> metrics;
     private AtomicLong id;
 
-    public NoteResource(Note defaultNote) {
+    public NoteResource() {
         notes = new ArrayList<>();
         metrics = new ArrayList<>();
         id = new AtomicLong();
-
-        defaultNote.setId(id.incrementAndGet());
-        notes.add(defaultNote);
     }
 
     @GET

@@ -13,12 +13,10 @@ public class MetricResource {
     private List<Metric> metricList;
     private AtomicLong id;
 
-    public MetricResource(Metric defaultMetric) {
+    public MetricResource() {
 
         metricList = new ArrayList<>();
         id = new AtomicLong();
-        defaultMetric.setId(id.incrementAndGet());
-        metricList.add(defaultMetric);
     }
 
     @POST
