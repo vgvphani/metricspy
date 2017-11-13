@@ -97,6 +97,7 @@ gradle-app.setting
 .gradletasknamecache
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+!gradle-wrapper.jar
 # gradle/wrapper/gradle-wrapper.properties
 ### Java template
 # Compiled class file
@@ -151,3 +152,4 @@ Temporary Items
 
 # ignore all .db files
 /backend/*.db
+
