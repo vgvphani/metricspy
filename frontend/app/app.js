@@ -1,4 +1,4 @@
-angular.module('app', [])
+angular.module('app', ['ngRoute'])
     .factory('noteService', noteService)
     .component('noteForm', {
         templateUrl: 'app/note-form/note-form.tpl',
@@ -10,15 +10,10 @@ angular.module('app', [])
         },
 
         bindings: {
-          data: '<',
-          onSubmit: '<',
-          onReset: '<'
+            data: '<',
+            onSubmit: '<',
+            onReset: '<'
         }
-    })
-    .component('notes', {
-        templateUrl: 'app/notes/notes.tpl',
-        controller: NotesController,
-        controllerAs: 'vm'
     })
     .component('note', {
         templateUrl: 'app/note/note.tpl',
@@ -26,10 +21,18 @@ angular.module('app', [])
         controllerAs: 'vm',
 
         require: {
-          notesController: '^notes'
+            notesController: '^notes'
         },
 
         bindings: {
             data: '<'
         }
-    });
+    })
+    .component('notes', {
+        templateUrl: 'app/notes/notes.tpl',
+        controller: NotesController,
+        controllerAs: 'vm'
+    })
+    .component('navigation', { templateUrl: 'app/navigation/navigation.tpl' })
+    .component('info', { templateUrl: 'app/info/info.tpl' })
+    .config(appConfig);
