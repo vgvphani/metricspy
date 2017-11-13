@@ -7,7 +7,7 @@ public class Note {
     private int id;
 
     @NotEmpty
-    @Length(min = 2, max = 12, message = "must not be between 2 and 12 characters")
+    @Length(min = 2, max = 12, message = "must be between 2 and 12 characters")
     private String title;
 
     @NotEmpty
