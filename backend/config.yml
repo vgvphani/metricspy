@@ -1,0 +1,14 @@
+assets:
+  overrides:
+    /: ../frontend/
+
+server:
+  rootPath: '/api/*'
+
+database:
+  driverClass: org.sqlite.JDBC
+  user: note
+  password: metrics!
+  url: jdbc:sqlite:metrics.db
+  properties:
+    charSet: UTF-8

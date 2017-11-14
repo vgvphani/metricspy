@@ -1,25 +1,30 @@
-package se.example2.softhouse;
+package se.softhouse.metrics;
 
 import com.bazaarvoice.dropwizard.assets.AssetsBundleConfiguration;
 import com.bazaarvoice.dropwizard.assets.AssetsConfiguration;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
-import se.example2.softhouse.Data.Metric;
-import se.example2.softhouse.Note.Note;
+import io.dropwizard.db.DataSourceFactory;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotNull;
 
-/**
- * Created by hxs on 2016-08-16.
- */
-public class MetricSpyConfiguration extends Configuration implements AssetsBundleConfiguration{
+class MetricSpyConfiguration extends Configuration implements AssetsBundleConfiguration {
+    @Valid
+    @NotNull
+    @JsonProperty("database")
+    private DataSourceFactory dataSourceFactory = new DataSourceFactory();
+
     @Valid
     @NotNull
     @JsonProperty
     private final AssetsConfiguration assets = new AssetsConfiguration();
 
+    DataSourceFactory getDataSourceFactory() {
+        return this.dataSourceFactory;
+    }
+
     public AssetsConfiguration getAssetsConfiguration() {
-        return assets;
+        return this.assets;
     }
 }

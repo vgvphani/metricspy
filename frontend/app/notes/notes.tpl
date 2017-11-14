@@ -1,7 +1,5 @@
 <div class="container">
-    <div class="row">
-        <h4 class="col-xs-12 page-header">NotesApp</h4>
-    </div>
+    <navigation class="row"></navigation>
 
     <div class="row">
         <note-form class="col-xs-12"></note-form>

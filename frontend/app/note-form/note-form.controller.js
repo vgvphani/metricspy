@@ -1,36 +1,20 @@
-/**
- * @param {Object} noteService the noteService which handles the communication between the controller and the API.
- * @constructor
- */
 function NoteFormController(noteService) {
     var vm = this;
 
     vm.$onInit = $onInit;
 
-    /**
-     * If a parent controller has provided a on-submit attribute, then we use it. Otherwise, use defaultSubmitForm
-     * @example <note-form on-submit="doSomething()"></note-form>
-     * @type {Function}
-     */
-    vm.onSubmit = vm.onSubmit || defaultSubmitForm;
+    vm.onSubmit = vm.onSubmit || onUserDidSubmit;
+    vm.onReset  = vm.onReset || onUserDidReset;
 
-    /**
-     * If a parent controller has provided a on-reset attribute, then we use it. Otherwise, use defaultResetForm
-     * @example <note-form on-reset="doSomething()"></note-form>
-     * @type {Function}
-     */
-    vm.onReset  = vm.onReset || defaultResetForm;
+    vm.showError = showError;
 
-
-    /**
-     * Initializer. Called every time this component is created (using <note-form></note-form>).
-     */
     function $onInit() {
         var parentControllerHasSetData = angular.isDefined(vm.data);
         vm.title = parentControllerHasSetData ? vm.data.title : '';
         vm.text  = parentControllerHasSetData ? vm.data.text  : '';
     }
 
+<<<<<<< HEAD
 
     /**
      * The default function for when the user presses 'Submit'. The default behaviour
@@ -44,18 +28,23 @@ function NoteFormController(noteService) {
                 console.log(res);
             });
         noteService.create(title, text)
+=======
+    function onUserDidSubmit(title, text) {
+        return noteService.create(title, text)
+>>>>>>> f4a54a68201c631610fc1d6b2a7351c0b4c45d51
             .then(vm.notesController.refreshNotes)
-            .then(defaultResetForm);
+            .then(onUserDidReset)
+            .catch(vm.showError);
     }
 
-
-    /**
-     * The default behaviour resets the note to its starting state. Meaning, we clear all the fields from data.
-     */
-    function defaultResetForm() {
+    function onUserDidReset() {
         vm.title = '';
         vm.text = '';
         vm.noteForm.$setPristine();
         vm.noteForm.$setUntouched();
+    }
+
+    function showError(response) {
+        alert(response.data.errors.join("\n"));
     }
 }

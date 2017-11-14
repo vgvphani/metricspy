@@ -1,15 +1,12 @@
-package se.example2.softhouse.Data;
+package se.softhouse.metrics.db.entity;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-/**
- * Created by hxs on 2016-08-16.
- */
+
 public class Metric {
 
     @JsonProperty
-    private Long id;
+    private int id;
 
     @JsonProperty
     private String hostname;
@@ -24,9 +21,11 @@ public class Metric {
     private float cpuUsage;
 
 
-    public Metric() {}
+    public Metric() {
 
-    public Metric(Long id, String hostname, Long memoryUsage, float diskUsage, float cpuUsage) {
+    }
+
+    public Metric(int id, String hostname, Long memoryUsage, float diskUsage, float cpuUsage) {
         this.id = id;
         this.hostname = hostname;
         this.memoryUsage = memoryUsage;
@@ -34,11 +33,11 @@ public class Metric {
         this.cpuUsage = cpuUsage;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
