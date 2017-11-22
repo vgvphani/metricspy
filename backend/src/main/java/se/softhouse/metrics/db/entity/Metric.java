@@ -12,6 +12,9 @@ public class Metric {
     private String hostname;
 
     @JsonProperty
+    private String timestamp;
+
+    @JsonProperty
     private Long memoryUsage;
 
     @JsonProperty
@@ -25,9 +28,10 @@ public class Metric {
 
     }
 
-    public Metric(int id, String hostname, Long memoryUsage, float diskUsage, float cpuUsage) {
+    public Metric(int id, String hostname, String timestamp, Long memoryUsage, float diskUsage, float cpuUsage) {
         this.id = id;
         this.hostname = hostname;
+        this.timestamp = timestamp;
         this.memoryUsage = memoryUsage;
         this.diskUsage = diskUsage;
         this.cpuUsage = cpuUsage;
@@ -49,11 +53,19 @@ public class Metric {
         this.hostname = hostname;
     }
 
-    public long getMemoryUsage() {
+    public String getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(String timestamp) {
+        this.timestamp = timestamp;
+    }
+
+    public Long getMemoryUsage() {
         return memoryUsage;
     }
 
-    public void setMemoryUsage(long memoryUsage) {
+    public void setMemoryUsage(Long memoryUsage) {
         this.memoryUsage = memoryUsage;
     }
 
@@ -71,16 +83,5 @@ public class Metric {
 
     public void setCpuUsage(float cpuUsage) {
         this.cpuUsage = cpuUsage;
-    }
-
-    @Override
-    public String toString() {
-        return "Metric{" +
-                "id=" + id +
-                ", hostname='" + hostname + '\'' +
-                ", memoryUsage='" + memoryUsage + '\'' +
-                ", diskUsage='" + diskUsage + '\'' +
-                ", cpuUsage='" + cpuUsage + '\'' +
-                '}';
     }
 }

@@ -17,4 +17,3 @@ while True :
  print response
  time.sleep(3)
  
-   

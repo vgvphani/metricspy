@@ -1,36 +1,8 @@
 angular.module('app', ['ngRoute'])
-    .factory('noteService', noteService)
-    .component('noteForm', {
-        templateUrl: 'app/note-form/note-form.tpl',
-        controller: NoteFormController,
-        controllerAs: 'vm',
-
-        require: {
-            notesController: '^notes'
-        },
-
-        bindings: {
-            data: '<',
-            onSubmit: '<',
-            onReset: '<'
-        }
-    })
-    .component('note', {
-        templateUrl: 'app/note/note.tpl',
-        controller: NoteController,
-        controllerAs: 'vm',
-
-        require: {
-            notesController: '^notes'
-        },
-
-        bindings: {
-            data: '<'
-        }
-    })
-    .component('notes', {
-        templateUrl: 'app/notes/notes.tpl',
-        controller: NotesController,
+    .factory('metricService', metricService)
+    .component('dashboard', {
+        templateUrl: 'app/dashboard/dashboard.tpl',
+        controller: DashboardController,
         controllerAs: 'vm'
     })
     .component('navigation', { templateUrl: 'app/navigation/navigation.tpl' })
