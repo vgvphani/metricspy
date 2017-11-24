@@ -22,8 +22,8 @@ public interface MetricDAO {
             "cpuUsage FLOAT(2,1) NOT NULL)")
     void createTable();
 
-    @SqlQuery("SELECT * FROM `metric`")
-    //@SqlQuery("SELECT * FROM `metric` group by hostname order by id desc")
+    //@SqlQuery("SELECT * FROM `metric`")
+    @SqlQuery("SELECT * FROM `metric` group by hostname order by id desc")
     List<Metric> selectAll();
 
     @SqlQuery("SELECT * FROM `metric` WHERE id = :id")
