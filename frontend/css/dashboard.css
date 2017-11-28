@@ -3,7 +3,7 @@ div{
 }
 
 .container-fluid{
-    background-color: #a6e1ec;
+    background-color: #afd9ee;
 }
 .row{
     color: #080808;
@@ -15,5 +15,29 @@ div{
 }
 
 h1 {
+   font-family: "Century Gothic";
    background-color: #f8f8f8;
+}
+
+h2 {
+    font-family: "Century Gothic";
+    font-style: italic;
+    background-color: #269abc;
+    color: #f8f8f8;
+}
+
+footer {
+    background-color: #c7ddef;
+    height: 50px;
+    font-size: medium;
+    font-style: oblique;
+    font-family: "Century Gothic";
+}
+
+hr {
+
+}
+
+.footerhr {
+    width: 50%
 }
