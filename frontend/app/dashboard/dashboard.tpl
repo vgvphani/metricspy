@@ -1,8 +1,10 @@
 <div class="container-fluid" >
     <h1 class="page-header"><u>MetricSpy</u> <small>spy your server</small></h1>
+<!--
     <div class="row">
         <div class="col-lg-offset-2">
-        <div id="weekend" class="row col-lg-6 panel panel-default" ng-repeat="metric in vm.metrics">
+-->
+        <div id="weekend" class="row col-md-6 center-block panel panel-default" ng-repeat="metric in vm.metrics">
             <div class="panel-heading">
                 <h3 class="panel-title">{{metric.hostname}}</h3>
             </div>
@@ -23,11 +25,18 @@
                     </ul>
                 </div>
             <div class="list-group">
-        <a href="#/info" class="list-group-item active">Detailed View</a>
+        <a href="#/graphs" class="list-group-item active">Detailed View</a>
             </div>
          </div>
+<!--
         </div>
     </div>
+-->
 </div>
+<footer>
+    <hr id="footerhr">
+    <p align="center">&copy;&nbsp;MetricSpy</p>
+    <hr id="footerhr">
+</footer>
 
 
