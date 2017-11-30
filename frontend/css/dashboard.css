@@ -55,3 +55,14 @@ footer {
     font-style: oblique;
     font-family: "Century Gothic";
 }
+
+p {}
+
+.refreshpg{
+    font-family: "Century Gothic";
+    font-style: italic;
+    font-size: large;
+    background-color: #c7ddef;
+    color: #f9f9f9;
+}
+
