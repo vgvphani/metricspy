@@ -14,7 +14,7 @@ div{
 }
 
 .notice-default {
-    background: silver;
+    background: transparent;
     border-color: grey;
 }
 .container-fluid{

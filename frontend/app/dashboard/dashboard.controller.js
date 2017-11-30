@@ -38,8 +38,8 @@ function DashboardController(metricService) {
     function hasNotReported(metric) {
         var a = (new Date().getTime())// for current time in epoch millisecs.
         var myDate = new Date(metric.timestamp);
-        var myEpoch = myDate.getTime()+3600000
+        var myEpoch = myDate.getTime()
         var diff = (a - myEpoch)/(60*1000)
-        return (diff<25)
+        return (diff>132)
     }
 }
