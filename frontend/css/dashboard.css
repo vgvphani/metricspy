@@ -1,7 +1,22 @@
 div{
 
 }
+.panel-default > .panel-heading-custom {
+    background: red!important; color: black;
+}
 
+.panel-content-success {
+    background-color: #5cb85c;
+}
+
+.panel-content-danger {
+    background-color: black;
+}
+
+.notice-default {
+    background: silver;
+    border-color: grey;
+}
 .container-fluid{
     background-color: #afd9ee;
 }
