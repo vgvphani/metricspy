@@ -10,9 +10,12 @@
             <!--<canvas id="vm.metricsSpyGraph"></canvas>-->
 
 
-            <canvas id="myCanvas" ng-class="vm.options" width="900" height="300"
-                    style="border:1px solid #000000;">
-            </canvas>
+            <canvas
+                    tc-chartjs
+                    chart-type="doughnut"
+                    chart-data="myData"
+                    chart-options="myOptions"
+            ></canvas>
 
             <br>
             <footer>

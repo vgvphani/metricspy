@@ -14,6 +14,12 @@ div{
     padding-left: 100px;
 }
 
+/*.panel-heading {*/
+    /*background-image: -webkit-linear-gradient(top,yellow 0, #dbff46 100%);*/
+    /*border-color: #F6E3CE !important;*/
+/*}*/
+
+
 h1 {
    font-family: "Century Gothic";
    background-color: #f8f8f8;
@@ -26,18 +32,11 @@ h2 {
     color: #f8f8f8;
 }
 
+
 footer {
     background-color: #c7ddef;
     height: 50px;
     font-size: medium;
     font-style: oblique;
     font-family: "Century Gothic";
-}
-
-hr {
-
-}
-
-.footerhr {
-    width: 50%
 }

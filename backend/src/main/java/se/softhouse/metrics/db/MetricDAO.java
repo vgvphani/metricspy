@@ -17,12 +17,12 @@ public interface MetricDAO {
     @SqlUpdate("CREATE TABLE IF NOT EXISTS `metric`(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " + //
             "hostname VARCHAR(20) NOT NULL, " + //
             "Timestamp DATETIME DEFAULT CURRENT_TIMESTAMP NULL, " + //
-            "memoryUsage BIGINT(13) NOT NULL, " + //
+            "memoryUsage REAL NOT NULL, " + //
             "diskUsage FLOAT(2,1) NOT NULL, " + //
             "cpuUsage FLOAT(2,1) NOT NULL)")
     void createTable();
 
-    //@SqlQuery("SELECT * FROM `metric`")
+//    @SqlQuery("SELECT * FROM `metric`")
     @SqlQuery("SELECT * FROM `metric` group by hostname order by id desc")
     List<Metric> selectAll();
 

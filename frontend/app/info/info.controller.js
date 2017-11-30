@@ -4,10 +4,15 @@ function InfoController(metricService) {
 
     vm.$onInit = $onInit;
     vm.refreshMetrics = refreshMetrics;
-    vm.myLineChart = myLineChart;
 
     function $onInit() {
         vm.metrics = [];
         vm.refreshMetrics();
     }
+}
+
+function refreshMetrics() {
+    return metricService.list().then(function refreshedMetrics(response) {
+        vm.metrics = response.data;
+    });
 }
