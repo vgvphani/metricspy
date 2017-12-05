@@ -20,6 +20,12 @@ public class MetricServiceDbImpl implements MetricService {
     }
 
     @Override
+    public List<Metric> getMetricsBy(String hostname) {
+        return metricDAO.select(hostname);
+    }//for info page
+
+
+    @Override
     public void createMetric(Metric metric) {
         metricDAO.insert(metric);
     }

@@ -1,4 +1,4 @@
-function InfoController(metricService) {
+function InfoController(infoService, $routeParams) {
 
     var vm = this;
 
@@ -6,13 +6,14 @@ function InfoController(metricService) {
     vm.refreshMetrics = refreshMetrics;
 
     function $onInit() {
+        vm.hostname = $routeParams.hostname;
         vm.metrics = [];
         vm.refreshMetrics();
     }
-}
 
-function refreshMetrics() {
-    return metricService.list().then(function refreshedMetrics(response) {
-        vm.metrics = response.data;
-    });
+    function refreshMetrics() {
+        return infoService.list(vm.hostname).then(function refreshedMetrics(response) {
+            vm.metrics = response.data;
+        });
+    }
 }

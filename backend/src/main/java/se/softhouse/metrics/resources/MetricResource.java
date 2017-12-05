@@ -27,13 +27,21 @@ public class MetricResource {
     }
 
     @GET
-    public List<Metric> getNotes() {
+    public List<Metric> getMetrics() {
         return metricService.getMetric();
     }
 
     @GET
+    @Path("/graphs/{hostname}")
+    public List<Metric> getMetricsBy(@PathParam("hostname") String hostname) {
+        return metricService.getMetricsBy(hostname);
+    }
+    //for info page
+
+
+    @GET
     @Path("/{id}")
-    public Metric getNote(@PathParam("id") int id) {
+    public Metric getMetric(@PathParam("id") int id) {
         return metricService.getMetricBy(id);
     }
 

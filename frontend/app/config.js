@@ -1,7 +1,7 @@
 function appConfig($routeProvider) {
     $routeProvider
         .when('/', { template: '<dashboard></dashboard>' })
-        .when('/graphs', { template: '<info></info>' })
+        .when('/graphs/:hostname', { template: '<info></info>' })
         .otherwise({
             redirectTo: '/'
         })

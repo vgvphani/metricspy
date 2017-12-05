@@ -1,5 +1,6 @@
 package se.softhouse.metrics.db;
 
+import com.sun.javafx.font.Metrics;
 import org.skife.jdbi.v2.sqlobject.Bind;
 import org.skife.jdbi.v2.sqlobject.BindBean;
 import org.skife.jdbi.v2.sqlobject.SqlQuery;
@@ -22,7 +23,10 @@ public interface MetricDAO {
             "cpuUsage FLOAT(2,1) NOT NULL)")
     void createTable();
 
-//    @SqlQuery("SELECT * FROM `metric`")
+   @SqlQuery("SELECT * FROM `metric` WHERE hostname = :name")
+    List<Metric> select(@Bind("name") String name); //for info page
+
+
     @SqlQuery("SELECT * FROM `metric` group by hostname order by id desc")
     List<Metric> selectAll();
 

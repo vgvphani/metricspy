@@ -5,7 +5,7 @@ function DashboardController(metricService) {
     vm.refreshMetrics = refreshMetrics;
     vm.hasHighCpuLoad = hasHighCpuLoad;
     vm.hasHighDiskLoad = hasHighDiskLoad;
-    vm.hasHighMemoryUsage = hasHighMemoryUsage
+    vm.hasHighMemoryUsage = hasHighMemoryUsage;
     vm.hasNotReported = hasNotReported;
 
     function $onInit() {
@@ -22,7 +22,7 @@ function DashboardController(metricService) {
     function hasHighCpuLoad(metric) {
         if (metric.cpuUsage>30)
             return "high"
-       else if (metric.cpuUsage<5)
+       else if (metric.cpuUsage<10)
            return "good"
         else
             return "okay"
@@ -38,7 +38,7 @@ function DashboardController(metricService) {
     }
 
     function hasHighMemoryUsage(metric) {
-        if (metric.memoryUsage>95)
+        if (metric.memoryUsage>90)
             return "high"
         else if (metric.memoryUsage<85)
             return "good"
@@ -50,9 +50,9 @@ function DashboardController(metricService) {
     function hasNotReported(metric) {
         var a = (new Date().getTime())// for current time in epoch millisecs.
         var myDate = new Date(metric.timestamp);
-        var myEpoch = myDate.getTime()
+        var myEpoch = myDate.getTime()+3600000
         var diff = (a - myEpoch)/(60*1000)
-        return (diff>132)
+        return (diff>5)
     }
 
 }

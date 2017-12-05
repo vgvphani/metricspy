@@ -5,12 +5,8 @@ angular.module('app', ['ngRoute'])
         controller: DashboardController,
         controllerAs: 'vm'
     })
-    // .component('metrics-graphs', {
-    //     templateUrl: 'app/metrics-graphs/metrics-graphs.tpl'
-    //     controller: DashboardController,
-    //     controllerAs: 'vm'
-    // })
     // .component('navigation', { templateUrl: 'app/navigation/navigation.tpl' })
+    .factory('infoService', infoService)
     .component('info', {
         templateUrl: 'app/info/info.tpl',
         controller: InfoController,
