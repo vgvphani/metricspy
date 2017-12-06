@@ -1,4 +1,4 @@
-angular.module('app', ['ngRoute'])
+angular.module('app', ['ngRoute','n3-line-chart'])
     .factory('metricService', metricService)
     .component('dashboard', {
         templateUrl: 'app/dashboard/dashboard.tpl',
