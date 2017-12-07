@@ -50,8 +50,6 @@ function InfoController(infoService, $routeParams) {
                 x: true,
                 y: true
             },
-
-
             zoom: {
                 x: true,
                 y: true,
@@ -67,15 +65,12 @@ function InfoController(infoService, $routeParams) {
                     id: "mySeries0"
                 }
             ],
-            axes: {x:
-                    {
-                    key: "x", type: 'date', min: new Date('2017-11-28 00:00:00'), max: new Date('2017-12-09 00:00:00')
-                    },
+            axes:{  x:
+                        {key: "x", type: 'date', min: new Date('2017-11-28 00:00:00'), max: new Date('2017-12-09 00:00:00')},
                     y:
-                    {
-                    min: 0,
-                    max: 100}
-                   }
+                        {min: 0,max: 100}
+            }
+
         };
 
         return data;
@@ -94,7 +89,16 @@ function InfoController(infoService, $routeParams) {
         };
 
         vm.graphsDiskOptions = {
-            margin: {top: 20},
+            margin: {
+                top: 20,
+                right: 30,
+                bottom: 20,
+                left: 10
+            },
+            pan: {
+                x: true,
+                y: true
+            },
             series: [
                 {
                     axis: "y",
@@ -106,10 +110,10 @@ function InfoController(infoService, $routeParams) {
                     id: "mySeries0"
                 }
             ],
-            axes: {x: {key: "x", type: 'date', min: new Date('2017-11-27 00:00:00'), max: new Date('2017-12-09 00:00:00')},y:
-                {
-                    min: 0,
-                    max: 100}
+            axes: {x:
+                    {key: "x", type: 'date', min: new Date('2017-11-27 00:00:00'), max: new Date('2017-12-09 00:00:00')},
+                   y:
+                    {min: 0,max: 100}
             }
         };
 
@@ -129,7 +133,16 @@ function InfoController(infoService, $routeParams) {
         };
 
         vm.graphsMemOptions = {
-            margin: {top: 20},
+            margin: {
+                top: 20,
+                right: 30,
+                bottom: 20,
+                left: 10
+            },
+            pan: {
+                x: true,
+                y: true
+            },
             series: [
                 {
                     axis: "y",
@@ -141,11 +154,11 @@ function InfoController(infoService, $routeParams) {
                     id: "mySeries0"
                 }
             ],
-            axes: {x: {key: "x", type: 'date', min: new Date('2017-11-27 00:00:00'), max: new Date('2017-12-09 00:00:00')},y:
-                {
-                    min: 0,
-                    max: 100}
-            }
+            axes: { x:
+                    {key: "x", type: 'date', min: new Date('2017-11-27 00:00:00'), max: new Date('2017-12-09 00:00:00')},
+                    y:
+                    {min: 0,max: 100}
+                   }
         };
 
         return data;

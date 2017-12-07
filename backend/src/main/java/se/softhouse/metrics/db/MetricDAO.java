@@ -24,8 +24,7 @@ public interface MetricDAO {
     void createTable();
 
    @SqlQuery("SELECT * FROM `metric` WHERE hostname = :name")
-    List<Metric> select(@Bind("name") String name); //for info page
-
+    List<Metric> select(@Bind("name") String name); //for info page(graphs)
 
     @SqlQuery("SELECT * FROM `metric` group by hostname order by id desc")
     List<Metric> selectAll();

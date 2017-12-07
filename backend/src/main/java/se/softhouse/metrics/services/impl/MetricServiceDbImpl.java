@@ -22,8 +22,7 @@ public class MetricServiceDbImpl implements MetricService {
     @Override
     public List<Metric> getMetricsBy(String hostname) {
         return metricDAO.select(hostname);
-    }//for info page
-
+    }//for info page(graphs)
 
     @Override
     public void createMetric(Metric metric) {

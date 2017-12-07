@@ -1,5 +1,8 @@
+html{
+    background-color: white;
+}
 div{
-
+    background-color: white;
 }
 .panel-default > .panel-heading-custom {
     background: red!important; color: black;
@@ -17,11 +20,18 @@ div{
     background: transparent;
     border-color: grey;
 }
+
 .container-fluid{
-    background-color: #afd9ee;
+    background-color: white;
 }
+
 .row{
     color: #080808;
+}
+
+.my-chart {
+    background-image: repeating-radial-gradient(cornflowerblue, white);
+    height: 400px;
 }
 
 #weekend {
@@ -29,15 +39,11 @@ div{
     padding-left: 100px;
 }
 
-/*.panel-heading {*/
-    /*background-image: -webkit-linear-gradient(top,yellow 0, #dbff46 100%);*/
-    /*border-color: #F6E3CE !important;*/
-/*}*/
-
-
 h1 {
    font-family: "Century Gothic";
-   background-color: #f8f8f8;
+    font-style: normal;
+    color: black;
+   background-image: linear-gradient(silver,#d9edf7);
 }
 
 h2 {
@@ -49,20 +55,24 @@ h2 {
 
 
 footer {
-    background-color: #c7ddef;
+    background-image: linear-gradient(silver,#d9edf7);
     height: 50px;
     font-size: medium;
     font-style: oblique;
     font-family: "Century Gothic";
 }
 
-p {}
+p {
+    font-style: normal;
+    min-height: 25px;
+    max-height: 40px;
+}
 
 .refreshpg{
     font-family: "Century Gothic";
     font-style: italic;
     font-size: large;
-    background-color: #c7ddef;
-    color: #f9f9f9;
+    background-image: linear-gradient(silver,#d9edf7);
+    color: white;
 }
 
