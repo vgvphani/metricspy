@@ -1,4 +1,9 @@
+html {
+    background-color: white;
+}
+
 div{
+    background-color: white;
 
 }
 .panel-default > .panel-heading-custom {
@@ -18,10 +23,14 @@ div{
     border-color: grey;
 }
 .container-fluid{
-    background-color: #afd9ee;
+    background-color: white;
 }
 .row{
     color: #080808;
+}
+.my-chart{
+    background-color: white;
+    height: 400px;
 }
 
 #weekend {
@@ -37,7 +46,9 @@ div{
 
 h1 {
    font-family: "Century Gothic";
-   background-color: #f8f8f8;
+    font-style: normal;
+    color: white;
+   background-color: dodgerblue;
 }
 
 h2 {
@@ -49,20 +60,26 @@ h2 {
 
 
 footer {
-    background-color: #c7ddef;
-    height: 50px;
+
+    background-color: white;
+        height: 50px;
     font-size: medium;
     font-style: oblique;
     font-family: "Century Gothic";
 }
 
-p {}
+p {
+    background-color: white;
+        font-style: normal;
+    min-height: 25px;
+    max-height: 40px;
+}
 
 .refreshpg{
     font-family: "Century Gothic";
     font-style: italic;
     font-size: large;
-    background-color: #c7ddef;
-    color: #f9f9f9;
+    background-color: white;
+    color: white;
 }
 
