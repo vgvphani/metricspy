@@ -73,7 +73,7 @@ function InfoController(infoService, $routeParams) {
 
         };
 
-        return data;
+        return (data);
     }
 
     function compileDiskData(metric) {
@@ -122,6 +122,7 @@ function InfoController(infoService, $routeParams) {
 
     function compileMemData(metric) {
         memUsage = [];
+        console.log(memUsage)
         metric.forEach(function(datapoint) {
             memUsage.push({
                 x: new Date(datapoint.timestamp),

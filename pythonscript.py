@@ -11,10 +11,10 @@ while True :
  disk = psutil.disk_usage('/')
  data = [('hostname', hostname), ('memoryUsage', (mem)),('diskUsage', disk[3]), ('cpuUsage', cpu)]
  data = collections.OrderedDict(data)
- url = 'http://localhost:8080/api/metric'
+ url = 'http://192.168.1.154:8080/api/metric'
  headers = {'content-type': 'application/json'}
 ## print data
- response = requests.post('http://localhost:8080/api/metric', data=json.dumps(data), headers=headers)
+ response = requests.post('http://192.168.1.154:8080/api/metric', data=json.dumps(data), headers=headers)
  print response
  time.sleep(3)
    
