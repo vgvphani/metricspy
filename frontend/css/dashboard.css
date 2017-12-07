@@ -29,7 +29,7 @@ div{
     color: #080808;
 }
 .my-chart{
-    background-color: white;
+    background-image: repeating-radial-gradient(cornflowerblue, white);
     height: 400px;
 }
 
@@ -47,8 +47,8 @@ div{
 h1 {
    font-family: "Century Gothic";
     font-style: normal;
-    color: white;
-   background-color: dodgerblue;
+    color: black;
+   background-image:linear-gradient(silver, #d9edf7);
 }
 
 h2 {
@@ -61,7 +61,7 @@ h2 {
 
 footer {
 
-    background-color: white;
+    background-image: linear-gradient(silver, #d9edf7);
         height: 50px;
     font-size: medium;
     font-style: oblique;
@@ -69,7 +69,6 @@ footer {
 }
 
 p {
-    background-color: white;
         font-style: normal;
     min-height: 25px;
     max-height: 40px;
@@ -79,7 +78,8 @@ p {
     font-family: "Century Gothic";
     font-style: italic;
     font-size: large;
-    background-color: white;
+    background-image: linear-gradient(white, #d9edf7);
     color: white;
+
 }
 
