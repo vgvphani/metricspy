@@ -1,7 +1,7 @@
 <div class="container-fluid" >
     <h1 class="page-header"><u>MetricSpy</u> <small>spy your server</small></h1>
     <div><p align="center" class="refreshpg"><a href="#/reload()">Click here to get latest metrics</a></p></div>
-    <hr><br>
+    <br>
         <div id="weekend" class="row col-md-6 center-block panel panel-default" ng-class="vm.hasNotReported(metric)?'panel-danger':'panel-success'" ng-repeat="metric in vm.metrics">
             <div class="panel-heading">
                 <h3 class="panel-title">{{metric.hostname}}</h3>
@@ -34,7 +34,7 @@
 <br><br><br>
 <footer>
     <hr>
-    <p style="background-color: white" align="center">&copy;&nbsp;MetricSpy</p>
+    <p align="center">&copy;&nbsp;MetricSpy</p>
     <hr>
 </footer>
 

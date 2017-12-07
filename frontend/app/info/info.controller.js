@@ -31,7 +31,7 @@ function InfoController(infoService, $routeParams) {
         cpuUsage = [];
         metric.forEach(function(datapoint) {
             cpuUsage.push({
-                x: datapoint.id,
+                x: new Date(datapoint.timestamp),
                 val_0: datapoint.cpuUsage})
         });
 
@@ -40,21 +40,36 @@ function InfoController(infoService, $routeParams) {
         };
 
         vm.graphsCpuOptions = {
-            margin: {top: 5},
+            margin: {
+                top: 20,
+                right: 30,
+                bottom: 20,
+                left: 10
+            },
+            pan: {
+                x: true,
+                y: true
+            },
+
+
+            zoom: {
+                x: true,
+                y: true,
+            },
             series: [
                 {
                     axis: "y",
                     dataset: "dataset0",
                     key: "val_0",
-                    label: "A line series",
-                    color: "hsla(88, 48%, 48%, 1)",
+                    label: "Cpu Usage",
+                    color: "hsla(11, 85%, 5%, 1)",
                     type: ["line","dot"],
                     id: "mySeries0"
                 }
             ],
             axes: {x:
                     {
-                    key: "x"
+                    key: "x", type: 'date', min: new Date('2017-11-28 00:00:00'), max: new Date('2017-12-09 00:00:00')
                     },
                     y:
                     {
@@ -70,7 +85,7 @@ function InfoController(infoService, $routeParams) {
         diskUsage = [];
         metric.forEach(function(datapoint) {
             diskUsage.push({
-                x: datapoint.id,
+                x: new Date(datapoint.timestamp),
                 val_0: datapoint.diskUsage})
         });
 
@@ -79,19 +94,19 @@ function InfoController(infoService, $routeParams) {
         };
 
         vm.graphsDiskOptions = {
-            margin: {top: 5},
+            margin: {top: 20},
             series: [
                 {
                     axis: "y",
                     dataset: "dataset0",
                     key: "val_0",
-                    label: "A line series",
-                    color: "hsla(88, 48%, 48%, 1)",
+                    label: "Disk Usage",
+                    color: "hsla(11, 85%, 5%, 1)",
                     type: ["line","dot"],
                     id: "mySeries0"
                 }
             ],
-            axes: {x: {key: "x"},y:
+            axes: {x: {key: "x", type: 'date', min: new Date('2017-11-27 00:00:00'), max: new Date('2017-12-09 00:00:00')},y:
                 {
                     min: 0,
                     max: 100}
@@ -106,7 +121,7 @@ function InfoController(infoService, $routeParams) {
         console.log(memUsage)
         metric.forEach(function(datapoint) {
             memUsage.push({
-                x: datapoint.id,
+                x: new Date(datapoint.timestamp),
                 val_0: datapoint.memoryUsage})
         });
 
@@ -115,19 +130,19 @@ function InfoController(infoService, $routeParams) {
         };
 
         vm.graphsMemOptions = {
-            margin: {top: 5},
+            margin: {top: 20},
             series: [
                 {
                     axis: "y",
                     dataset: "dataset0",
                     key: "val_0",
-                    label: "A line series",
-                    color: "hsla(88, 48%, 48%, 1)",
+                    label: "Memory Usage",
+                    color: "hsla(11, 85%, 5%, 1)",
                     type: ["line","dot"],
                     id: "mySeries0"
                 }
             ],
-            axes: {x: {key: "x"},y:
+            axes: {x: {key: "x", type: 'date', min: new Date('2017-11-27 00:00:00'), max: new Date('2017-12-09 00:00:00')},y:
                 {
                     min: 0,
                     max: 100}
